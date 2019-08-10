@@ -9,7 +9,7 @@ class SamsungReport:
  #       self.okt = Okt
         self.okt = Okt()
 
-
+ #   @staticmethod  -> 15행에서 self.okt.pos~~~를 사용하게 되므로 12행에 기재한 이 표기를 삭제하고 13행 def read_file(): 의 괄호안에 self 기재
     def read_file(self):
 #        okt = Okt()
 #        okt.pos("삼성전자 글로벌센터 전자사업부", stem=True)
