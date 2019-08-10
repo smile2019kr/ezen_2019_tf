@@ -3,6 +3,7 @@ from webcrawl.bugsmusic import BugsCrawler
 from webcrawl.krx import KrxCrawler
 from webcrawl.naver_stock import StockModel
 from webcrawl.naver_movie import NaverMovie
+from webcrawl.naver_login import NaverLogin
 
 class Controller:
     def __init__(self):
@@ -28,6 +29,11 @@ class Controller:
             elif flag == 'nm':
                 nm = NaverMovie('https://movie.naver.com/movie/sdb/rank/rmovie.nhn')
                 nm.scrap()
+
+            #https://nid.naver.com/nidlogin.login 자동로그인
+            elif flag == 'nl':
+                nl = NaverLogin('https://nid.naver.com/nidlogin.login')
+                nl.auto_login()
 
 
  #def print_menu():
