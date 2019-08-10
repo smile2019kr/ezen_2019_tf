@@ -104,6 +104,8 @@ class SamsungReport:
 #wordcloud를 불러와야하므로 터미널에서 pip install wordcloud 설치 후 맨 위에 가서 wordcloud 불러오기
     def draw_wordcloud(self):
         # 97행부터의 freqtxt는 실제빈도수를 체크하기 위함이므로 워드클라우드에서 단어를 그림으로 나타내기위해서는 wordstops가 삭제된 remove_stopword를 활용해야함
+        # wordcloud만 본다면 97-102행은 불필요하지만 막대그래프 산출 등에는 97-102행의 freqtxt 가 필요함
+        # 제일 빈도수 높은 단어가 가장 크게 그려짐
         texts = self.remove_stopword()
         # D2Coding.ttf -> 폰트. sleck에서 다운로드
         wcloud = WordCloud('./data/D2Coding.ttf', relative_scaling=0.2, background_color='white').generate(" ".join(texts))
