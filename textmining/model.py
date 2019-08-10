@@ -51,6 +51,20 @@ class SamsungReport:
         print('------ 추출된 명사 300 ------')
         print(texts[:300])
 
+#nltk 다운로드하기
     @staticmethod
     def download():
         nltk.download()
+
+#stopword 53행까지의 결과를 보고 분석에 필요없는 단어들을 삭제하는 것.
+    # 데이터폴더에 stopword.txt 로 주어져있음
+    @staticmethod
+    def remove_stopword():
+        stopfile = './data/stopwords.txt'
+        with open(stopfile, 'r', encoding='utf-8') as f:
+            stopwords = f.read()
+        stopwords = stopwords.split(' ')
+#디버깅용으로 10개만 출력
+        print('------- 제거할 단어 --------')
+        print(stopwords[:10])
+        return stopwords
