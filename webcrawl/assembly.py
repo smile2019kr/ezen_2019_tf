@@ -12,3 +12,4 @@ class AssemblyCrawler:
         print(txt)
 
 # 해당페이지의 정보를 통째로 가져옴
+
