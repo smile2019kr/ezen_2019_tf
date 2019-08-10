@@ -10,5 +10,7 @@ if __name__ == '__main__':
 #    sam.download()
  # 12행 - nltk 다운로드 완료된 이후 활성화해서 실행 (nltk 다운로드 완료 전까지는 비활성화로 진행)
     print(sam.extract_noun())
-
+    print(sam.read_stopword())
     print(sam.remove_stopword())
+    print(sam.find_freq())
+    print(sam.draw_wordcloud())
